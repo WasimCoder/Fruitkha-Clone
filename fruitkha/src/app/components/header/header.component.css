@@ -1,0 +1,81 @@
+
+.header-container{
+    background-color: transparent;
+    height: 110px;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    place-items: center;
+    transition: background-color 0.5s, height 0.5s;
+}
+.header-logo, .header-menu, .header-end{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.header-logo img{
+    width: 180px;
+}
+.header-menu{
+    width: 60%;
+    justify-content: space-around;
+}
+.header-menu button{
+    color: var(--white);
+    border: none;
+    font-size: 16px;
+    background: none;
+    transition: var(--color);
+}
+.home-list{
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 20px;
+    right: 0;
+    height: 4rem;
+    width: 8rem;
+    display: none;
+    background: var(--white);
+}
+.header-menu button:hover{
+    color: var(--orange);
+}
+.header-menu button:nth-child(1){
+    color: var(--orange);
+    transition: var(--color);
+}
+.home-button:hover .home-list{
+    color: var(--white);
+    z-index: 10;
+    display: block;
+}
+
+.header-change{
+    position: fixed;
+    background-color: var(--dark-blue);
+    height: 80px;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+.header-end{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header-end button{
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+.icon-change{
+    color: var(--white);
+}
+/* .home-button{
+    /* position: relative; 
+} */
+
+/* .home-button:hover .home-list{
+    
+} */
