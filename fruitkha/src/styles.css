@@ -37,3 +37,10 @@
     margin: 0;
     padding: 0;
 }
+.orange{
+  color: var(--orange);
+
+}
+.sub-topic{
+  font-size: 26px;
+}

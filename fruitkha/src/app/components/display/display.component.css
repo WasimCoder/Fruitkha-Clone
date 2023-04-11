@@ -147,9 +147,11 @@
 }
 .display-details p:nth-child(1){
     font-size: 30px;
+    text-shadow: 0px 6px 20px rgba(0,0,0,0.50);
 }
 .display-details p:nth-child(2){
     font-size: 70px;
+    text-shadow: 0px 6px 20px rgba(0,0,0,0.50);
 }
 .display-buttons{
     display: flex;
