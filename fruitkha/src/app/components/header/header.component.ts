@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
+  constructor(private route: Router){}
   ngOnInit():void{
   } 
 
@@ -17,5 +19,17 @@ export class HeaderComponent implements OnInit{
     else{
       this.header_variable = false;
     }
+  }
+  about(){
+    this.route.navigate(['/about'])
+  }
+  home(){
+    this.route.navigate(['/home'])
+  }
+  news(){
+    this.route.navigate(['/news'])
+  }
+  contact(){
+    this.route.navigate(['/contact'])
   }
 }

@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-display',
@@ -6,6 +7,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent {
+  constructor(private route: Router){}
   public header_variable:boolean = false;
   @HostListener('document:scroll') onScroll(){
     if(document.body.scrollTop>0 || document.documentElement.scrollTop>0){
@@ -15,4 +17,5 @@ export class DisplayComponent {
       this.header_variable = false;
     }
   }
+
 }

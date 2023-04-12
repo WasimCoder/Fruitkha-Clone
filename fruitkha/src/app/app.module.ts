@@ -15,6 +15,10 @@ import { VideoComponent } from './components/video/video.component';
 import { NewsComponent } from './components/news/news.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { NgbModule , NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
+import { AboutComponent } from './components/about/about.component';
+import { TeamComponent } from './components/team/team.component';
+import { TabnewsComponent } from './components/tabnews/tabnews.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -30,13 +34,17 @@ import { NgbModule , NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
     ReviewComponent,
     VideoComponent,
     NewsComponent,
-    LogoComponent
+    LogoComponent,
+    AboutComponent,
+    TeamComponent,
+    TabnewsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    NgbCarouselModule
+    NgbCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
