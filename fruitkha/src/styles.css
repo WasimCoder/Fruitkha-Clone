@@ -44,3 +44,9 @@
 .sub-topic{
   font-size: 26px;
 }
+p{
+  margin-bottom: 0;
+}
+button, input{
+  cursor: pointer;
+}

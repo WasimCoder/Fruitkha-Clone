@@ -58,10 +58,10 @@ align-items: center;
     color: var(--yellow);
 }
 .video-container .video-content-box{
-   display: grid;
-   grid-template-rows: 20px 60px 200px;
-   /* place-items: center;   */
-   place-content: center;
+    display: grid;
+    place-items: revert;
+    place-content: center;
+    grid-template-rows: 20px 80px 223px;
 }
 .video-container .video-content-box .video-heading p{
     font-size: 60px
@@ -98,7 +98,7 @@ align-items: center;
 }
 .banner-content{
     position: absolute;
-    top: 200px;
+    top: 90px;
     left: 60px;
     height: 300px;
     width: 450px;
@@ -133,6 +133,7 @@ align-items: center;
     font-size: 16px;
     transition: 0.2s all linear;
 }
+
 .banner-container button:hover{
     color: var(--light);
     background: var(--dark-blue);

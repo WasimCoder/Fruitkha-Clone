@@ -123,18 +123,21 @@
 .display-container{
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
+    /* height: 650px; */
 }
 .display-container img{
     /* background: url("/assets/images/photo1.jpg"); */
     /* background-image: ; */
+    object-fit: fill;
     width: 100%;
 }
 .display-details{
     position: absolute;
     width: 100%;
     display: flex;
+    margin-top: 200px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -146,12 +149,16 @@
     color: white;
 }
 .display-details p:nth-child(1){
-    font-size: 30px;
-    text-shadow: 0px 6px 20px rgba(0,0,0,0.50);
+    font-size: 20px;
+    letter-spacing: 10px;
+    word-spacing: 5px;
+    color: var(--orange);
+    text-shadow: inset 0px 6px 20px rgb(255, 255, 255);
 }
 .display-details p:nth-child(2){
     font-size: 70px;
-    text-shadow: 0px 6px 20px rgba(0,0,0,0.50);
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.50);
+    -webkit-text-stroke: solid 0.5px black;
 }
 .display-buttons{
     display: flex;
@@ -162,18 +169,29 @@
 .display-buttons button{
     border-radius: 20px;
     height: 40px;
-    width: 140px;
+    width: 160px;
+    font-size: 14px;
     border: none;
 }
 .display-buttons button:nth-child(1){
     background-color: var(--orange);
     color: var(--dark);
+    transition: all 0.3s linear;
+}
+.display-buttons button:nth-child(1):hover{
+    background: var(--dark-blue);
+    color: var(--white);
 }
 
 .display-buttons button:nth-child(2){
     background-color: var(--dark);
     color: var(--white);
     border: solid 1px var(--orange);
+    transition: all 0.3s linear;
+}
+.display-buttons button:nth-child(2):hover{
+    background: var(--orange);
+    color: var(--dark);
 }
 
 /*List section*/
@@ -188,11 +206,11 @@
 
 }
 .list-content{
-    height: 200px;
-    width: 300px;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    place-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 330px;
+    white-space: nowrap;
+    /* height: 200px; */
     /* border: solid 1px black; */
 
 }
@@ -200,6 +218,7 @@
     font-size: 48px;
     color: var(--dark-blue);
     padding: 14px;
+    margin-right: 20px;
     border: dotted var(--orange);
     border-radius: 50%;
     display: flex;

@@ -102,6 +102,7 @@
 }
 .time-stamp p{
     font-size: 30px;
+    margin-bottom: 0;
 }
 .deal-cart{
     height: 70px;
