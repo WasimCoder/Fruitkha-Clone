@@ -19,6 +19,7 @@ import { AboutComponent } from './components/about/about.component';
 import { TeamComponent } from './components/team/team.component';
 import { TabnewsComponent } from './components/tabnews/tabnews.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ContactComponent } from './components/contact/contact.component';
     AboutComponent,
     TeamComponent,
     TabnewsComponent,
-    ContactComponent
+    ContactComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

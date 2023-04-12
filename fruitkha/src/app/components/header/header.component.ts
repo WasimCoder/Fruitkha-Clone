@@ -32,4 +32,7 @@ export class HeaderComponent implements OnInit{
   contact(){
     this.route.navigate(['/contact'])
   }
+  cart(){
+    this.route.navigate(['/cart'])
+  }
 }
