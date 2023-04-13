@@ -5,85 +5,32 @@
     </div>
     <div class="news-list">
         <div class="newss">
-            <div class="news">
+            <div *ngFor="let news of newsDetails" class="news">
                <div class="news-image">
-                <img src="/assets/images/news1.jpg" alt="">
+                <img [src]="news.newsImg" alt="">
                </div>
                <div class="news-text">
                <div class="news-topic">
-                <p>You will vainly look for fruit on it in autumn.</p>
+                <p>{{news.newsTopic}}</p>
                </div>
                <div class="news-author-details">
                <div class="news-author">
                 <i class="fas far fa-user-circle"></i>
-                <p>Admin</p>
+                <p>{{news.newsAuthor}}</p>
                </div>
                <div class="news-date">
                 <i class="fas fas fa-calendar-times"></i>
-                <p>10/02/2022</p>
+                <p>{{news.newsDate}}</p>
                </div>
             </div>
                 <div class="news-content">
-                    <p>Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
+                    <p>{{news.newsContent}}</p>
                 </div>
                 <div class="news-link">
                     <a href="#">know more ></a>
                 </div>
             </div>
 
-            </div>
-            <div class="news">
-                <div class="news-image">
-                    <img src="/assets/images/news2.jpg" alt="">
-                   </div>
-                   <div class="news-text">
-                   <div class="news-topic">
-                    <p>A man's worth has its season, like tomato.</p>
-                   </div>
-                   <div class="news-author-details">
-                   <div class="news-author">
-                    <i class="fas far fa-user-circle"></i>
-                    <p>Admin</p>
-                   </div>
-                   <div class="news-date">
-                    <i class="fas fas fa-calendar-times"></i>
-                    <p>10/02/2022</p>
-
-                   </div>
-                </div>
-                    <div class="news-content">
-                        <p>Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-                    </div>
-                    <div class="news-link">
-                        <a href="#">know more ></a>
-                    </div>
-                </div>
-            </div>
-            <div class="news">
-                <div class="news-image">
-                    <img src="/assets/images/news3.jpg" alt="">
-                   </div>
-                   <div class="news-text">
-                   <div class="news-topic">
-                    <p>Good thoughts bear good fresh juicy fruit.</p>
-                   </div>
-                   <div class="news-author-details">
-                        <div class="news-author">
-                            <i class="fas far fa-user-circle"></i>
-                            <p>Admin</p>
-                        </div>
-                        <div class="news-date">
-                            <i class="fas fas fa-calendar-times"></i>
-                            <p>10/02/2022</p>
-                        </div>
-                </div>
-                    <div class="news-content">
-                        <p>Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-                    </div>
-                    <div class="news-link">
-                        <a href="#">know more ></a>
-                    </div>
-                    </div>
             </div>
         </div>
     </div>
