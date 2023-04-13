@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { window } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -25,6 +26,8 @@ export class HeaderComponent implements OnInit{
   }
   home(){
     this.route.navigate(['/home'])
+  }
+  top(){
   }
   news(){
     this.route.navigate(['/news'])

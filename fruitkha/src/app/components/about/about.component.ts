@@ -8,20 +8,20 @@ import { Component } from '@angular/core';
 export class AboutComponent {
   content = [{
     image:'/assets/images/review1.png',
-    name: 'itachi',
+    name: 'Michael',
     work: 'software Developer',
-    content: 'Hello i am itachi and i am a software developer'
+    content: 'Hello i am Michael and i am a software developer'
   
   },{
     image:'/assets/images/review2.png',
-    name: 'sasori',
+    name: 'Sally',
     work: 'Model Designer',
-    content: 'Hello i am sasori and i am a Model Designer'
+    content: 'Hello i am Sally and i am a Model Designer'
   },{
     image:'/assets/images/review3.png',
-    name: 'kisame',
+    name: 'Peter',
     work: 'Marine Architect',
-    content: 'Hello i am kisame and i am a Marine Architect'
+    content: 'Hello i am Peter and i am a Marine Architect'
   },
   ]
   logoContent =[ 

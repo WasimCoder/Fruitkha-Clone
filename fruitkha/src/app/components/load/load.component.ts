@@ -9,6 +9,7 @@ export class LoadComponent implements OnInit{
   constructor(private eref: ElementRef){}
   ngOnInit(){
     setTimeout(() => {
+      
       this.loaded=true;
     }, 1000);
   }

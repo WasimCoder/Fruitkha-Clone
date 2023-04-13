@@ -23,6 +23,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { LoadComponent } from './components/load/load.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShopComponent } from './components/shop/shop.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TabnewsComponent,
     ContactComponent,
     CartComponent,
-    LoadComponent
+    LoadComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,18 @@
 <header [class.header-change]="header_variable" class="header-container">
     <div class="header-logo">
-        <img (click)="home()" src="/assets/images/logo.png" alt="">
+        <img (click)="home()" (click)="top()" src="/assets/images/logo.png" alt="">
     </div>
     <div class="header-menu">     
         <div class="hovering-block">
             <button class="home-button"(click)="home()">Home</button>
-            <div class="home-list">
+            <!-- <div class="home-list">
                 <a href="#">Wasim</a>
                 <a href="#">Wasim</a>
                 <a href="#">Wasim</a>
-            </div>
+            </div> -->
     </div>
         <button class="about-button" (click)="about()">About</button>
-        <button class="pages-button">Pages</button>
+        <!-- <button class="pages-button">Pages</button> -->
         <button class="news-button"(click)="news()">News</button>
         <button class="contact-button"(click)="contact()">Contact</button>
         <button class="shop-button">Shop</button>
