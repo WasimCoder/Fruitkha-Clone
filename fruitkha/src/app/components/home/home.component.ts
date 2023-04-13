@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+  constructor(private eref: ElementRef){}
+  public loaded:boolean = false;
+  ngOnInit(){
+    setTimeout(() => {
+      this.loaded=true;
+    }, 1000);
+  }
 content = [{
   image:'/assets/images/review1.png',
   name: 'itachi',

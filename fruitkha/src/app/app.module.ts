@@ -20,6 +20,9 @@ import { TeamComponent } from './components/team/team.component';
 import { TabnewsComponent } from './components/tabnews/tabnews.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CartComponent } from './components/cart/cart.component';
+import { LoadComponent } from './components/load/load.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,13 +43,17 @@ import { CartComponent } from './components/cart/cart.component';
     TeamComponent,
     TabnewsComponent,
     ContactComponent,
-    CartComponent
+    CartComponent,
+    LoadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     NgbCarouselModule,
+    GoogleMapsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

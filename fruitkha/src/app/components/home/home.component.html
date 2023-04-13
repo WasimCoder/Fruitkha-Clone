@@ -1,5 +1,7 @@
-<div class="home-container">
+<app-load [class.isLoaded]="loaded" ></app-load>
+<div [class.homeload]="loaded" class="home-container">
     <!-- <app-about></app-about> -->
+
     <app-header></app-header>
     <app-display></app-display>
     <app-products></app-products>

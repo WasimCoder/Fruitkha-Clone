@@ -1,12 +1,16 @@
 import { Directive, HostListener, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[mouseover]'
+  selector: '[screenmouse]'
 })
 export class StyleDirective {
   constructor(private eref: ElementRef) { }
   @HostListener('mouseover') onMouseOver(){
-    this.eref.nativeElement.display = "block";
+    setTimeout( ()=>{
+      this.eref.nativeElement.display = "none";  
+      this.eref.nativeElement.opacity = "0";  
+    },4000)
+    
   }
  
 }

@@ -29,6 +29,7 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     --color: color 0.3s linear;
+    --bb: solid 1px black;
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
@@ -49,4 +50,17 @@ p{
 }
 button, input{
   cursor: pointer;
+}
+.gb{
+  width: 100px;
+  height: 40px;
+  background: var(--orange);
+  border: none;
+  color: white;
+  transition: all 0.3s linear;
+  border-radius: 25px;
+}
+.gb:hover{
+  background:var(--dark-blue);
+  color: var(--orange);
 }
