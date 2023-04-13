@@ -24,6 +24,7 @@ import { LoadComponent } from './components/load/load.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShopComponent } from './components/shop/shop.component';
+import { BtsearchComponent } from './components/btsearch/btsearch.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ShopComponent } from './components/shop/shop.component';
     ContactComponent,
     CartComponent,
     LoadComponent,
-    ShopComponent
+    ShopComponent,
+    BtsearchComponent
   ],
   imports: [
     BrowserModule,

@@ -25,4 +25,7 @@ export class FooterComponent {
   cart(){
     this.route.navigate(['/cart'])
   }
+  shop(){
+    this.route.navigate(['/shop'])
+  }
 }

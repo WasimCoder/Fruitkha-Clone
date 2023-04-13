@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TabnewsComponent } from './components/tabnews/tabnews.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CartComponent } from './components/cart/cart.component';
+import { ShopComponent } from './components/shop/shop.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch:'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: "news", component:TabnewsComponent,pathMatch:'full'},
   {path: "contact", component:ContactComponent,pathMatch:'full'},
   {path: "cart", component:CartComponent,pathMatch:'full'},
+  {path: "shop", component:ShopComponent,pathMatch:'full'},
 ];
 
 @NgModule({
