@@ -25,6 +25,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShopComponent } from './components/shop/shop.component';
 import { BtsearchComponent } from './components/btsearch/btsearch.component';
+import { FruitsService } from './services/fruits.service';
 
 
 @NgModule({
@@ -59,7 +60,7 @@ import { BtsearchComponent } from './components/btsearch/btsearch.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [FruitsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

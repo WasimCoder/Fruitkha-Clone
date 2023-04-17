@@ -1,5 +1,5 @@
-import { NgFor } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FruitsService } from 'src/app/services/fruits.service';
 interface productList{
   prodImage: string;
   prodName: string;
@@ -10,39 +10,12 @@ interface productList{
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.css']
 })
-export class ShopComponent {
-  productList: productList[] = [
-    {
-      prodImage: '/assets/images/strawberry.jpg',
-      prodName: 'Strawberry',
-      prodPrice: '70$',
-    },
-    {
-      prodImage: '/assets/images/grapes.jpg',
-      prodName: 'Grapes',
-      prodPrice: '50$',
-    },
-    {
-      prodImage: '/assets/images/lemon.jpg',
-      prodName: 'Lemon',
-      prodPrice: '60$',
-    },
-    {
-      prodImage: '/assets/images/kiwi.jpg',
-      prodName: 'kiwi',
-      prodPrice: '80$',
-    },
-    {
-      prodImage: '/assets/images/apple.jpg',
-      prodName: 'Green Apple',
-      prodPrice: '60$',
-    },
-    {
-      prodImage: '/assets/images/raspberry.jpg',
-      prodName: 'Raspberry',
-      prodPrice: '60$',
-    },
-    ]
+export class ShopComponent implements OnInit{
+  constructor(private fruitlist: FruitsService){}
+  productList: productList[] = []
+  ngOnInit(): void {
+    this.productList = this.fruitlist.getFruitsList()
+  }
     searchText: string = '';
     onSearchTextEntered(searchValue: string){
       this.searchText = searchValue;

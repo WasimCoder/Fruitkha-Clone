@@ -2,11 +2,20 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    opacity: 1;
-    background: black;
+    background: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fade 1s linear;
+}
+@keyframes fade{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        display: none;
+        opacity: 0.8;
+    }
 }
 .isLoaded{
     transition: 3s all linear;

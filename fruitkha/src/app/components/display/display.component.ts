@@ -17,5 +17,11 @@ export class DisplayComponent {
       this.header_variable = false;
     }
   }
+  shop(){
+    this.route.navigate(['/shop'])
+  }
+  contact(){
+    this.route.navigate(['/contact'])
+  }
 
 }

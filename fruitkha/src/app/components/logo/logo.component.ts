@@ -1,8 +1,6 @@
 import { Component, Input } from '@angular/core';
-interface logoBox{
-img: string,
-src: string
-}
+import { logoBox } from 'src/app/environments/fruitkha.model';
+
 @Component({
   selector: 'app-logo',
   templateUrl: './logo.component.html',

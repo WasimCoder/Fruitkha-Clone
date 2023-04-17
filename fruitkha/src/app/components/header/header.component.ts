@@ -27,8 +27,6 @@ export class HeaderComponent implements OnInit{
   home(){
     this.route.navigate(['/home'])
   }
-  top(){
-  }
   news(){
     this.route.navigate(['/news'])
   }
@@ -41,4 +39,12 @@ export class HeaderComponent implements OnInit{
   shop(){
     this.route.navigate(['/shop'])
   }
+  //  links:object = {
+  //   "home": this.home(),
+  //   "about": this.about(),
+  //   "news": this.news(),
+  //   "contact": this.contact(),
+  //   "shop": this.shop(),
+  //   "cart": this.cart(),
+  // }
 }
