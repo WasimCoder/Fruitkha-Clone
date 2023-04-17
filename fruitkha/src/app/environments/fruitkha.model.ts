@@ -21,10 +21,10 @@ export interface contentlist{
     content: string
 }
 export interface links{
-    home: Promise<boolean>,
-    about:Promise<boolean>,
-    news: Promise<boolean>,
-    contact:Promise<boolean>,
-    shop:Promise<boolean>,
-    cart: Promise<boolean>
+    home: string,
+    about:string,
+    news: string,
+    contact:string,
+    shop:string,
+    cart: string
 }

@@ -11,11 +11,11 @@
     </div>
     <div class="pages">
         <p>Pages</p><br><br>
-        <button (click)="home()"> > Home</button><br>
-        <button (click)="about()"> > About</button><br>
-        <button (click)="shop()"> > Shop</button><br>
-        <button (click)="news()"> > News</button><br>
-        <button (click)="contact()"> > Contact</button>
+        <button [routerLink]="nav[0].home" > > Home</button><br>
+        <button [routerLink]="nav[1].about" > > About</button><br>
+        <button [routerLink]="nav[4].shop" > > Shop</button><br>
+        <button [routerLink]="nav[2].news" > > News</button><br>
+        <button [routerLink]="nav[3].contact" > > Contact</button>
     </div>
     <div class="subscribe">
         <p>Subscribe</p>

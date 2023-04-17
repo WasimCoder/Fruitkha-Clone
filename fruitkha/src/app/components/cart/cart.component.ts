@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { logoBox } from 'src/app/environments/fruitkha.model';
+import { FruitsService } from 'src/app/services/fruits.service';
 
 @Component({
   selector: 'app-cart',
@@ -6,11 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-  logoContent =[ 
-    {img:"/assets/images/logo1.png",src:"logos"} ,
-    {img:"/assets/images/logo2.png",src:"logos"} ,
-    {img:"/assets/images/logo3.png",src:"logos"} ,
-    {img:"/assets/images/logo4.png",src:"logos"} , 
-    {img:"/assets/images/logo5.png",src:"logos"}  
-  ]
+  constructor(private contents: FruitsService){}
+  logoContent: logoBox[] = []
+  ngOnInit(): void {
+    this.logoContent = this.contents.getLogoList();
+  }
 }

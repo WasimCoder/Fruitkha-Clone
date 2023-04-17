@@ -26,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShopComponent } from './components/shop/shop.component';
 import { BtsearchComponent } from './components/btsearch/btsearch.component';
 import { FruitsService } from './services/fruits.service';
+import { HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { FruitsService } from './services/fruits.service';
     GoogleMapsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [FruitsService],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { window } from 'rxjs';
+import { links } from 'src/app/environments/fruitkha.model';
+import { FruitsService } from 'src/app/services/fruits.service';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,15 @@ import { window } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
-  constructor(private route: Router){}
+  nav:links[]=[];
+  constructor(private route: Router, private links: FruitsService){}
   ngOnInit():void{
-  } 
-
+this.links.getLinks().subscribe( (data)=>{
+  this.nav = data;
+  console.log(data);
+  
+})
+  }
   public header_variable:boolean = false;
   @HostListener('document:scroll') onScroll(){
     if(document.body.scrollTop>5 || document.documentElement.scrollTop>5){
@@ -21,30 +27,4 @@ export class HeaderComponent implements OnInit{
       this.header_variable = false;
     }
   }
-  about(){
-    this.route.navigate(['/about'])
-  }
-  home(){
-    this.route.navigate(['/home'])
-  }
-  news(){
-    this.route.navigate(['/news'])
-  }
-  contact(){
-    this.route.navigate(['/contact'])
-  }
-  cart(){
-    this.route.navigate(['/cart'])
-  }
-  shop(){
-    this.route.navigate(['/shop'])
-  }
-  //  links:object = {
-  //   "home": this.home(),
-  //   "about": this.about(),
-  //   "news": this.news(),
-  //   "contact": this.contact(),
-  //   "shop": this.shop(),
-  //   "cart": this.cart(),
-  // }
 }

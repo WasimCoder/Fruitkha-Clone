@@ -7,14 +7,15 @@
     width: 100%;
     height: 110px;
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 25% 50% 25%;
     place-items: center;
-    place-content: space-evenly;
+    place-content: center;
     transition: background-color 0.2s, height 0.2s;
 }
-.header-logo, .header-menu, .header-end{
-    position: relative;
+.header-logo, .header-menu{
+    /* position: relative; */
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 .hovering-block{
@@ -26,28 +27,31 @@
     position: absolute;
     background-color: aliceblue;
     display: none;
-    visibility: none;
     opacity: 0;
-    height: 100px;
-    width: 100px;
-    transition: all 1s linear;
+    height: 130px;
+    width: 140px;
+    transition: all 3s;
 }
-.hovering-block:hover .home-list{
+.hovering-block:hover .home-list, .home-button:hover .home-list:hover{
     display: block;
-    visibility: visible;
     opacity: 1;
 }
 .home-list a{
+    padding: 10px 20px;
     text-decoration: none;
+    font-size: 12px;
     color: black;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     line-height: 1.5;
-    
+    transition: var(--color);
+}
+.home-list a:hover{
+    color: var(--orange);
 }
 .header-logo img{
-    width: 180px;
+    width: 140px;
 }
 .header-menu{
     width: 60%;
@@ -56,7 +60,7 @@
 .header-menu button{
     color: var(--white);
     border: none;
-    font-size: 16px;
+    font-size: 14px;
     background: none;
     transition: var(--color);
 }
@@ -85,12 +89,12 @@
     left: 0;
 }
 .header-end{
-    width: 100%;
+    width: 40%;
     display: flex;
     justify-content: space-evenly;
 }
 .header-end button{
-    font-size: 20px;
+    font-size: 14px;
     background: none;
     border: none;
 }

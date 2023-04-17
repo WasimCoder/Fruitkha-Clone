@@ -1,41 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { links } from '../environments/fruitkha.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FruitsService {
 
-  constructor( private route: Router) { }
-    public about(){
-    this.route.navigate(['/about'])
-  }
-  public home(){
-    this.route.navigate(['/home'])
-  }
-  public news(){
-    this.route.navigate(['/news'])
-  }
-  public contact(){
-    this.route.navigate(['/contact'])
-  }
-  public cart(){
-    this.route.navigate(['/cart'])
-  }
-  public shop(){
-    this.route.navigate(['/shop'])
-  }
-  getLinks(){
-    return [
-      {
-         home: this.route.navigate(['/home']),
-          about: this.route.navigate(['/about']),
-          news: this.route.navigate(['/news']),
-          contact: this.route.navigate(['/contact']),
-          shop: this.route.navigate(['/shop']),
-          cart: this.route.navigate(['/cart']),
-        }
-    ]
+  constructor( private route: Router, private http: HttpClient) { }
+  link_url:string = '/assets/files/links.json';
+  getLinks():Observable<links[]>{
+    return this.http.get<links[]>(this.link_url)
   }
   getFruits(){
     return[
